@@ -22,11 +22,11 @@ exports = module.exports.homepage = async (req, res) => {
         const categories = await Category.find({}).limit(limitNumber)
         const latest = await Recipe.find({}).sort({ _id: -1 }).limit(limitNumber)
 
-        const thai = await Recipe.find({ 'category': 'Thai' }).limit(limitNumber)
-        const chineese = await Recipe.find({ 'category': 'Chineese' }).limit(limitNumber)
-        const mexico = await Recipe.find({ 'category': 'Mexico' }).limit(limitNumber)
-        const indian = await Recipe.find({ 'category': 'Indian' }).limit(limitNumber)
-        const italian = await Recipe.find({ 'category': 'Italian' }).limit(limitNumber)
+        const thai = await Recipe.find({ 'category': 'Breakfast' }).limit(limitNumber)
+        const chineese = await Recipe.find({ 'category': 'Lunch' }).limit(limitNumber)
+        const mexico = await Recipe.find({ 'category': 'Dinner' }).limit(limitNumber)
+        const indian = await Recipe.find({ 'category': 'Dessert' }).limit(limitNumber)
+        const italian = await Recipe.find({ 'category': 'Midnight snack' }).limit(limitNumber)
         const american = await Recipe.find({ 'category': 'American' }).limit(limitNumber)
 
         const food = { latest, thai, chineese, indian, mexico, italian, american }
