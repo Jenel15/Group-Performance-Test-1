@@ -22,12 +22,11 @@ exports = module.exports.homepage = async (req, res) => {
         const categories = await Category.find({}).limit(limitNumber)
         const latest = await Recipe.find({}).sort({ _id: -1 }).limit(limitNumber)
 
-        const thai = await Recipe.find({ 'category': 'Breakfast' }).limit(limitNumber)
-        const chineese = await Recipe.find({ 'category': 'Lunch' }).limit(limitNumber)
-        const mexico = await Recipe.find({ 'category': 'Dinner' }).limit(limitNumber)
-        const indian = await Recipe.find({ 'category': 'Dessert' }).limit(limitNumber)
-        const italian = await Recipe.find({ 'category': 'Midnight snack' }).limit(limitNumber)
-        const american = await Recipe.find({ 'category': 'American' }).limit(limitNumber)
+        const Breakfast = await Recipe.find({ 'category': 'Breakfast' }).limit(limitNumber)
+        const Lunch = await Recipe.find({ 'category': 'Lunch' }).limit(limitNumber)
+        const Dinner = await Recipe.find({ 'category': 'Dinner' }).limit(limitNumber)
+        const Dessert = await Recipe.find({ 'category': 'Dessert' }).limit(limitNumber)
+        const Midnight snack = await Recipe.find({ 'category': 'Midnight snack' }).limit(limitNumber)
 
         const food = { latest, thai, chineese, indian, mexico, italian, american }
         res.render('index', { title: 'Cooking Blog - Home', categories, food, userId, userName })
@@ -37,82 +36,6 @@ exports = module.exports.homepage = async (req, res) => {
     }
 
 }
-// async function insertDummyData(){
-//   try{
-//     await Category.insertMany(
-//         [
-//             {
-//                 "name":"Thai",
-//                 "image":"pad_thai_1.jpeg"
-//             },
-//             {
-//                 "name":"Italian",
-//                 "image":"pizza_1.jpeg"
-//             },
-//             {
-//                 "name":"Indian",
-//                 "image":"mutton_kurma_1.jpeg"
-//             },
-//             {
-//                 "name":"Mexican",
-//                 "image":"mexican_shwarma_1.jpeg"
-//             },
-//             {
-//                 "name":"Thai",
-//                 "image":"mango sticky rice_2.jpeg"
-//             },
-//         ]
-//         )
-//   } 
-//   catch(error){
-//     console.log("error",error);
-//   } 
-// }
-// insertDummyData()
-// async function insertDummyRecipeData() {
-//     try {
-//         await Recipe.insertMany(
-//             [
-//                 {
-//                     "name": "Chilly Chicken",
-//                     "description": "Chilli chicken is a popular Indo-chinese appetizer made by tossing fried chicken in spicy hot chilli sauce.",
-//                     "email": "n.anchusree@gmail.com",
-//                     "ingredients": ["Chicken", "Ginger", "Garlic", "Lemon juice", "Onion", "Capsicum", "Salt"],
-//                     "category": "Chineese",
-//                     "image": "chilly_ckn_1.jpeg"
-//                 },
-//                 {
-//                     "name": "Mango Sticky Rice",
-//                     "description":"Mango sticky rice is a traditional Southeast Asian and South Asian dessert made with glutinous rice, fresh mango and coconut milk, and eaten with a spoon or the hands.",
-//                     "email": "aleena@gmail.com",
-//                     "ingredients": ["Glutinous (sweet) rice", "Coconut milk", "Sugar", "Sesame Seeds", "Mango", "Salt"],
-//                     "category": "Mexican",
-//                     "image": "mango sticky rice_2.jpeg"
-//                 },
-//                 {
-//                     "name": "Mexican Shawarma",
-//                     "description": "Shawarma is marinated with various seasonings and spices such as cumin, turmeric, and paprika. It is made by stacking thinly sliced meat, typically lamb, beef, or chicken, on a large rotating skewer or cone. It is also sometimes cooked with extra fat from the meat to give it a juicer taste.",
-//                     "email": "anchu@gmail.com",
-//                     "ingredients": ["Chicken", "Shawarma bread", "Cabbage", "Carrots",,"Cucumber", "Onion", "Capsicum", "Salt"],
-//                     "category": "Mexican",
-//                     "image": "mexican_shwarma_3.jpeg"
-//                 },
-//                 {
-//                     "name": "Pizza",
-//                     "description": "Pizza is a dish of Italian origin consisting of a usually round, flat base of leavened wheat-based dough topped with various ingredients",
-//                     "email": "shreya@gmail.com",
-//                     "ingredients": ["Chicken","Cheese","Olive", "Onion", "Capsicum","Yeast", "Salt","Sugar","Oregano"],
-//                     "category": "Italian",
-//                     "image": "pizza_3.jpeg"
-//                 }
-//             ]
-//         )
-//     }
-//     catch (error) {
-//         console.log("error", error);
-//     }
-// }
-//insertDummyRecipeData()
 
 exports = module.exports.exploreCategories = async (req, res) => {
     try {
