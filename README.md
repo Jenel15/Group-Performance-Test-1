@@ -6,9 +6,7 @@ Group Members: Lovely Saguid
 
 Purpose
 
-	The primary objective of The Recipe Sharing API is to nurture a lively online community focused on the pleasures of cooking, allowing developers to effortlessly integrate impactful features for sharing recipes into their applications. At its essence, the API endeavors to make culinary expertise more accessible and promote cooperation among cooking enthusiasts on a global scale. By equipping developers with a comprehensive toolkit for implementing functions like creating, sharing, and exploring recipes, The Recipe Sharing API strives to give users with various culinary 
-
-interests the ability to share their individual recipes, explore novel flavors, and participate in meaningful discussions about the culinary arts.
+The primary objective of The Recipe Sharing API is to nurture a lively online community focused on the pleasures of cooking, allowing developers to effortlessly integrate impactful features for sharing recipes into their applications. At its essence, the API endeavors to make culinary expertise more accessible and promote cooperation among cooking enthusiasts on a global scale. By equipping developers with a comprehensive toolkit for implementing functions like creating, sharing, and exploring recipes, The Recipe Sharing API strives to give users with various culinary interests the ability to share their individual recipes, explore novel flavors, and participate in meaningful discussions about the culinary arts.
 
 
 Features
