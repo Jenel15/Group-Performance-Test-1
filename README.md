@@ -1,7 +1,7 @@
 Group Leader: Vince Jemuel Pelaez
 
-Group Members: Lovely Saguid
-               Eldrick Sabida
+Group Members: Lovely Saguid 
+               Eldrick Sabida 
                Jenel Ricafrente
 
 
